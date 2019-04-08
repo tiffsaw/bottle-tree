@@ -1,0 +1,12 @@
+//To use inside components
+@import 'foundation/scss/breakpoints/util';
+@import 'partials/variables';
+@import 'partials/mixins';
+
+//Global styles
+/* stylelint-disable selector-pseudo-class-no-unknown */
+:global {
+  @import 'partials/normalizer';
+  @import 'foundation/scss/foundation';
+  @import 'partials/base';
+}

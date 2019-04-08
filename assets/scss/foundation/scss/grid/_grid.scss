@@ -1,0 +1,68 @@
+// Foundation for Sites by ZURB
+// foundation.zurb.com
+// Licensed under MIT Open Source
+
+////
+/// @group grid
+////
+
+/// Font size attribute applied to `<html>` and `<body>`. We use 100% by default so the value is inherited from the user's browser settings.
+/// @type Number
+$global-font-size: 10px;
+
+/// Global width of your site. Used by the grid to determine row width.
+/// @type Number
+$global-width: rem-calc(1500) !default;
+
+/// Default line height for all type. `$global-lineheight` is 24px while `$global-font-size` is 16px
+/// @type Number
+$global-lineheight: 1.5 !default;
+
+/// The maximum width of a row.
+/// @type Number
+$grid-row-width: $global-width !default;
+
+/// Sets the text direction of the CSS. Can be either `ltr` or `rtl`.
+/// @type Keyword
+$global-text-direction: ltr !default;
+
+// Internal variables used for text direction
+$global-left: if($global-text-direction == rtl, right, left);
+$global-right: if($global-text-direction == rtl, left, right);
+
+/// The default column count of a grid. Changing this value affects the logic of the grid mixins, and the number of CSS classes output.
+/// @type Number
+$grid-column-count: 12 !default;
+
+/// The amount of space between columns at different screen sizes. To use just one size, set the variable to a number instead of a map.
+/// @type Map | Length
+/// @since 6.1.0
+$grid-column-gutter: 30px !default;
+
+/// If `true`, the last column in a row will align to the opposite edge of the row.
+/// @type Boolean
+$grid-column-align-edge: true !default;
+
+/// Selector used for an alias of column (with @extend). If `false`, no alias is created.
+/// @type String
+$grid-column-alias: 'columns' !default;
+
+/// The highest number of `.x-up` classes available when using the block grid CSS.
+/// @type Number
+$block-grid-max: 8 !default;
+
+// Internal value to store the end column float direction
+$-zf-end-float: if($grid-column-align-edge, right, left);
+
+html {
+  box-sizing: border-box;
+  font-size: $global-font-size;
+} //html
+
+@import 'row';
+@import 'column';
+@import 'size';
+@import 'position';
+@import 'gutter';
+@import 'classes';
+@import 'layout';

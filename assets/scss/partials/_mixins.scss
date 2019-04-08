@@ -1,0 +1,23 @@
+// Rem sizing /w px fallback
+@mixin font-size($sizeValue: 1.6) {
+  font-size: $sizeValue * 10 + px;
+  font-size: $sizeValue + rem;
+} // *Usage ^
+// @include font-size(1.4);
+
+@mixin line-height($sizeValue: 1.6) {
+  line-height: $sizeValue * 10 + px;
+  line-height: $sizeValue + rem;
+} // *Usage ^
+// @include line-height(4);
+
+@mixin headline($sizeValue: 20, $heightValue: 20) {
+  @include font-size($sizeValue);
+  @include line-height($heightValue);
+}
+
+@mixin size($w: 100%, $h: 100%) {
+  height: $h;
+  width: $w;
+} // *Usage ^
+//  @include size(100px, 50px);

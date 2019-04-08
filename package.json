@@ -1,0 +1,41 @@
+{
+  "name": "bottle-tree",
+  "version": "1.0.0",
+  "description": "The Bottle Tree Restaurant",
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-import": "^2.16.0",
+    "sass-resources-loader": "^2.0.0",
+    "stylelint": "^9.10.1",
+    "stylelint-order": "^2.2.0",
+    "stylelint-scss": "^3.5.4"
+  },
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tiffsaw/bottle-tree.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tiffsaw/bottle-tree/issues"
+  },
+  "homepage": "https://github.com/tiffsaw/bottle-tree#readme",
+  "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "axios": "^0.18.0",
+    "express": "^4.16.4",
+    "next": "^8.0.3",
+    "next-routes": "^1.4.2",
+    "node-sass": "^4.11.0",
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5"
+  }
+}
