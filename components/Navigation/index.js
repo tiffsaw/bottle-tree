@@ -1,17 +1,51 @@
+import React from 'react';
 import Link from 'next/link';
-import styles from './style.scss';
+import style from './style.scss';
 
-export default () => (
-  <div className={styles.root}>
-    <div className="row">
-      <div className="small-12 columns">
-        <ul>
-          <li><Link href="/"><a href="/">Home</a></Link></li>
-          <li><Link href="/menu"><a href="/menu">Menu</a></Link></li>
-          <li><Link href="/about"><a href="/about">About</a></Link></li>
-          <li><Link href="/reservations"><a href="/reservations">Reservations</a></Link></li>
-        </ul>
+const nav = [
+  {
+    name: 'Menu',
+    href: '/menu'
+  },
+  {
+    name: 'Reservations',
+    href: '/reservations'
+  },
+  {
+    name: 'Beer and Wine',
+    href: '/'
+  },
+  {
+    name: 'About',
+    href: '/about'
+  },
+  {
+    name: 'Contact Us',
+    href: '/'
+  }
+];
+
+export default function Nav() {
+  return (
+    <nav className={style.nav}>
+      <div className="row">
+        <div className="columns">
+          <ul className={style.navList}>
+            {nav.map(({ name, href }) => (
+              <li key={name} className={style.listItem}>
+                <Link href={href}>
+                  <a
+                    className={style.navLink}
+                    role="presentation"
+                  >
+                    {name}
+                  </a>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
-    </div>
-  </div>
-)
+    </nav>
+  );
+}

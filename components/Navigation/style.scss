@@ -1,3 +1,14 @@
-.root {
-  background: blue;
+.nav {
+  .listItem {
+    margin: 15px 0;
+  }
+
+  .navLink {
+    @include headline(1.6, 1.6);
+    color: $raw-sienna;
+    display: block;
+    font-family: $font-roboto-black;
+    text-align: center;
+    text-decoration: none;
+  }
 }

@@ -1,0 +1,13 @@
+.hero {
+  background-color: $heavenly-white;
+
+  h1 {
+    @include headline(4.5, 5);
+    font-family: $font-roboto-bold;
+  }
+
+  .image {
+    max-width: 1400px;
+    width: 100%;
+  }
+}
