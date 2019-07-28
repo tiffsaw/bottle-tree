@@ -12,4 +12,19 @@ $breakpoint-classes: small medium large;
 @import 'breakpoints/util';
 @import 'grid/grid';
 
+.row {
+  @include breakpoint(small only) {
+    max-width: 330px !important;
+    min-width: 320px;
+  }
+
+  @include breakpoint(medium) {
+    width: 720px;
+  }
+
+  @include breakpoint(large) {
+    width: 1140px;
+  }
+}//.row
+
 @include foundation-grid;

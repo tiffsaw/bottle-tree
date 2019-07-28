@@ -14,3 +14,18 @@ html {
 *::after {
   box-sizing: border-box;
 }
+
+
+.section-headlines {
+  @include headline(4, 4);
+  color: $color-copy;
+  display: inline-block;
+  font-family: $font-fira;
+  margin: 0;
+
+  &::after {
+    border: 3px solid $kepper;
+    content: '';
+    display: block;
+  }
+}

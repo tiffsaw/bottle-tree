@@ -1,4 +1,8 @@
 .header {
+  a {
+    text-decoration: none;
+  }
+
   .headline {
     @include headline(3, 3);
     color: $astronaut-blue;
