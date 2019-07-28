@@ -1,0 +1,73 @@
+.footer {
+  .footerWrap {
+    padding: 80px 0;
+    text-align: center;
+
+    @include breakpoint(medium) {
+      display: flex;
+      justify-content: center;
+    }
+
+    .block {
+      margin: 0 20px;
+    }
+
+    .headline {
+      @include headline(1.8, 2);
+      color: $astronaut-blue;
+      font-family: $font-montserrat-bold;
+    }
+
+    p {
+      @include headline(1.4, 1.6);
+      color: $color-copy;
+      font-family: $font-cutivemono;
+      margin-top: 20px;
+    }
+  }
+
+  .footerBanner {
+    background-color: $astronaut-blue;
+    padding: 10px 0;
+  }
+
+  .topWrapper {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .bannerText {
+    @include headline(1.8, 2);
+    color: $white;
+    font-family: $font-fira;
+    margin: 0;
+  }
+
+  .logoLink {
+    margin-right: 15px;
+    position: relative;
+    top: 2px;
+  }
+
+  .logo {
+    width: 20px;
+  }
+
+  .socialList {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 50px;
+
+    li {
+      &:first-of-type {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .socialIcons {
+    color: $white;
+    width: 20px;
+  }
+}

@@ -1,7 +1,6 @@
-import Head from 'next/head'
-import Navigation from '../components/Navigation'
-import React, { Component, Fragment } from 'react'
-import axios from 'axios'
+import React, { Component } from 'react';
+import Layout from '../components/layout';
+import axios from 'axios';
 
 export default class extends Component {
 
@@ -21,21 +20,14 @@ export default class extends Component {
 
   render() {
     return (
-      <Fragment>
-        <Head>
-          <title>{this.props.post.title.rendered}</title>
-          <meta name="description" content={`This is a single post for ${this.props.post.title.rendered}`} />
-          <meta charSet="utf-8" />
-          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        </Head>
-        <Navigation />
+      <Layout>
         <h1>{this.props.post.title.rendered}</h1>
         <article
           className="entry-content"
           dangerouslySetInnerHTML={{
             __html: this.props.post.content.rendered
           }} />
-      </Fragment>
+      </Layout>
     )
   }
 }

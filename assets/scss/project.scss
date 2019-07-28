@@ -1,9 +1,8 @@
-@import 'partials/reset';
-
 //To use inside components
 @import 'foundation/scss/breakpoints/util';
 @import 'partials/variables';
 @import 'partials/mixins';
+@import 'partials/reset';
 
 //Global styles
 /* stylelint-disable selector-pseudo-class-no-unknown */

@@ -1,47 +1,60 @@
 import Document, { Head, Main, NextScript } from 'next/document';
 
 export default class extends Document {
+  static async getInitialProps(ctx) {
+    const initialProps = await Document.getInitialProps(ctx);
+    return { ...initialProps };
+  }
   render() {
     return (
-      <html>
+      <html lang="en">
         <Head>
           <style dangerouslySetInnerHTML={{
             __html: `
             @font-face {
-              font-family: 'Roboto-Light';
-              font-style: normal;
-              font-weight: 300;
-              src: local('Roboto-Light'), local('Roboto-Light'),
-                url('/static/fonts/Roboto-Light.woff2') format('woff2')
-                url('/static/fonts/Roboto-Light.woff') format('woff')
-                url('/static/fonts/Roboto-Light.ttf') format('truetype')
-            }
-            @font-face {
-              font-family: 'Roboto-Regular';
+              font-family: 'FiraCode-Regular';
               font-style: normal;
               font-weight: 400;
-              src: local('Roboto-Regular'), local('Roboto-Regular'),
-                url('/static/fonts/Roboto-Regular.woff2') format('woff2')
-                url('/static/fonts/Roboto-Regular.woff') format('woff')
-                url('/static/fonts/Roboto-Regular.ttf') format('truetype')
+              src: local('FiraCode-Regular'), local('FiraCode-Regular'),
+                url('/static/fonts/FiraCode-Regular.woff2') format('woff2')
+                url('/static/fonts/FiraCode-Regular.woff') format('woff')
+                url('/static/fonts/FiraCode-Regular.ttf') format('truetype')
             }
             @font-face {
-              font-family: 'Roboto-Bold';
+              font-family: 'CutiveMono-Regular';
+              font-style: normal;
+              font-weight: 400;
+              src: local('CutiveMono-Regular'), local('CutiveMono-Regular'),
+                url('/static/fonts/CutiveMono-Regular.woff2') format('woff2')
+                url('/static/fonts/CutiveMono-Regular.woff') format('woff')
+                url('/static/fonts/CutiveMono-Regular.ttf') format('truetype')
+            }
+            @font-face {
+              font-family: 'Montserrat-Regular';
+              font-style: normal;
+              font-weight: 400;
+              src: local('Montserrat-Regular'), local('Montserrat-Regular'),
+                url('/static/fonts/Montserrat-Regular.woff2') format('woff2')
+                url('/static/fonts/Montserrat-Regular.woff') format('woff')
+                url('/static/fonts/Montserrat-Regular.ttf') format('truetype')
+            }
+            @font-face {
+              font-family: 'Montserrat-Bold';
               font-style: normal;
               font-weight: 700;
-              src: local('Roboto-Bold'), local('Roboto-Bold'),
-                url('/static/fonts/Roboto-Bold.woff2') format('woff2')
-                url('/static/fonts/Roboto-Bold.woff') format('woff')
-                url('/static/fonts/Roboto-Bold.ttf') format('truetype')
+              src: local('Montserrat-Bold'), local('Montserrat-Bold'),
+                url('/static/fonts/Montserrat-Bold.woff2') format('woff2')
+                url('/static/fonts/Montserrat-Bold.woff') format('woff')
+                url('/static/fonts/Montserrat-Bold.ttf') format('truetype')
             }
             @font-face {
-              font-family: 'Roboto-Black';
+              font-family: 'Montserrat-Black';
               font-style: normal;
               font-weight: 900;
-              src: local('Roboto-Black'), local('Roboto-Black'),
-                url('/static/fonts/Roboto-Black.woff2') format('woff2')
-                url('/static/fonts/Roboto-Black.woff') format('woff')
-                url('/static/fonts/Roboto-Black.ttf') format('truetype')
+              src: local('Montserrat-Black'), local('Montserrat-Black'),
+                url('/static/fonts/Montserrat-Black.woff2') format('woff2')
+                url('/static/fonts/Montserrat-Black.woff') format('woff')
+                url('/static/fonts/Montserrat-Black.ttf') format('truetype')
             }
         `}}/>
       </Head>

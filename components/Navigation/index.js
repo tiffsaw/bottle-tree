@@ -4,20 +4,24 @@ import style from './style.scss';
 
 const nav = [
   {
-    name: 'Menu',
-    href: '/menu'
+    name: 'About',
+    href: '/about'
+  },
+  {
+    name: 'Team',
+    href: ''
   },
   {
     name: 'Reservations',
     href: '/reservations'
   },
   {
-    name: 'Beer and Wine',
-    href: '/'
+    name: 'Food',
+    href: '/menu'
   },
   {
-    name: 'About',
-    href: '/about'
+    name: 'Drinks',
+    href: ''
   },
   {
     name: 'Contact Us',
@@ -27,16 +31,16 @@ const nav = [
 
 export default function Nav() {
   return (
-    <nav className={style.nav}>
-      <div className="row">
-        <div className="columns">
+    <div className="row">
+      <div className="small-12 columns">
+        <nav className={style.nav}>
           <ul className={style.navList}>
             {nav.map(({ name, href }) => (
               <li key={name} className={style.listItem}>
                 <Link href={href}>
                   <a
                     className={style.navLink}
-                    role="presentation"
+                    role="nav"
                   >
                     {name}
                   </a>
@@ -44,8 +48,8 @@ export default function Nav() {
               </li>
             ))}
           </ul>
-        </div>
+        </nav>
       </div>
-    </nav>
+    </div>
   );
 }

@@ -1,13 +1,22 @@
 .nav {
+  padding-bottom: 50px;
+
+  .navList {
+    @include breakpoint(medium) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
   .listItem {
-    margin: 15px 0;
+    margin: 0 30px;
   }
 
   .navLink {
     @include headline(1.6, 1.6);
     color: $raw-sienna;
     display: block;
-    font-family: $font-roboto-black;
+    font-family: $font-montserrat-bold;
     text-align: center;
     text-decoration: none;
   }

@@ -1,5 +1,5 @@
 body {
-  background: $heavenly-white;
+  background: $alabaster;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -7,4 +7,10 @@ body {
 html {
   font-size: 10px;
   -webkit-text-size-adjust: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }

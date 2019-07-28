@@ -1,8 +1,7 @@
-import Head from 'next/head'
-import Link from 'next/link'
-import Navigation from '../components/Navigation'
-import React, { Component, Fragment } from 'react'
-import axios from 'axios'
+import Link from 'next/link';
+import React, { Component } from 'react';
+import axios from 'axios';
+import Layout from '../components/layout';
 
 export default class extends Component {
 
@@ -20,14 +19,7 @@ export default class extends Component {
 
   render() {
     return (
-      <Fragment>
-        <Head>
-          <title>This is our posts page!</title>
-          <meta name="description" content="This is an example of a meta description. This will show up in search results." />
-          <meta charSet="utf-8" />
-          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        </Head>
-        <Navigation />
+      <Layout>
         <h1>Our Posts Page!</h1>
         <ul>
           {
@@ -44,7 +36,7 @@ export default class extends Component {
             })
           }
         </ul>
-      </Fragment>
+      </Layout>
     )
   }
 }
